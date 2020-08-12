@@ -1,4 +1,4 @@
-package com.project.backend.configuration;
+package com.project.backend.config;
 
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
@@ -7,7 +7,7 @@ import org.springframework.context.support.ReloadableResourceBundleMessageSource
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 
 @Configuration
-public class InternationalizationConfiguration {
+public class InternationalizationConfig {
 
   @Bean
   public MessageSource messageSource() {

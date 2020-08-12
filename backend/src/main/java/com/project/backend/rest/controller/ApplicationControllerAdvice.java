@@ -1,4 +1,4 @@
-package com.project.backend.rest;
+package com.project.backend.rest.controller;
 
 import java.util.List;
 import java.util.stream.Collectors;

@@ -1,6 +1,7 @@
 package com.project.backend.model.entity;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,13 +10,18 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import com.project.backend.model.entity.Cliente;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Entity
-public class Servico {
+@NoArgsConstructor
+@AllArgsConstructor
+public class ServicoPrestado {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,9 +31,13 @@ public class Servico {
   private String descricao;
 
   @ManyToOne
-  @JoinColumn(name = "id_cliente")
+  @JoinColumn(name = "cliente_id")
   private Cliente cliente;
 
   @Column
   private BigDecimal valor;
+
+  @Column
+  @JsonFormat(pattern = "dd/MM/yyyy")
+  private LocalDate data;
 }
