@@ -3,13 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-siderbar',
   templateUrl: './siderbar.component.html',
-  styleUrls: ['./siderbar.component.css']
+  styleUrls: ['./siderbar.component.css'],
 })
 export class SiderbarComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
