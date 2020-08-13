@@ -8,6 +8,7 @@ import { ClientesModule } from './pages/clientes/clientes.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
+import { ServicosPrestadosModule } from './pages/servicos-prestados/servicos-prestados.module';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
@@ -17,6 +18,7 @@ import { HomeComponent } from './pages/home/home.component';
     AppRoutingModule,
     TemplateModule,
     ClientesModule,
+    ServicosPrestadosModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
