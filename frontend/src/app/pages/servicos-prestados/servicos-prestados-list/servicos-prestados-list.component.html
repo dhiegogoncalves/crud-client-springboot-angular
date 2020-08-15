@@ -1,1 +1,70 @@
-<p>servicos-prestados-list works!</p>
+<h1 class="mt-4">Serviços Prestados</h1>
+<ol class="breadcrumb mb-4">
+  <li class="breadcrumb-item active">Consulta</li>
+</ol>
+
+<div class="container-fluid">
+  <form #search="ngForm" (submit)="onSearch()">
+    <div class="row">
+      <div class="col-md-6">
+        <label>Nome do Cliente:</label>
+        <input type="text" class="form-control" name="nome" [(ngModel)]="nome">
+      </div>
+
+      <div class="col-md-6">
+        <label>Mês:</label>
+        <select class="form-control" name="mes" [(ngModel)]="mes">
+          <option [value]=null disabled>Selecione...</option>
+          <option *ngFor="let mes of meses" [ngValue]="mes">{{ mes }}</option>
+        </select>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+      <div class="col-md-4">
+        <button type="submit" class="btn btn-primary">
+          <i class="fa fa-search"></i> Consultar
+        </button>
+
+        <button class="btn btn-warning ml-2" routerLink="/servicos-prestados-form">
+          <i class="fa fa-plus"></i> Novo
+        </button>
+      </div>
+    </div>
+  </form>
+
+  <br>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="alert alert-warning" relo="alert" *ngIf="message">
+        {{ message }}
+      </div>
+    </div>
+
+
+    <div class="col-md-12">
+      <table class="table table-condensed table-hover">
+        <thead>
+          <tr>
+            <th>Cliente</th>
+            <th>Descrição</th>
+            <th>Data</th>
+            <th>Preço</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let servicoPrestado of servicosPrestados">
+            <td>{{ servicoPrestado.cliente.nome }}</td>
+            <td>{{ servicoPrestado.descricao }}</td>
+            <td>{{ servicoPrestado.data }}</td>
+            <td>{{ servicoPrestado.preco }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>

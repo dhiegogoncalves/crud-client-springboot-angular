@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
 import { ClientesService } from './../clientes.service';
-import { Cliente } from '../cliente';
+import { ClienteDTO } from '../cliente.dto';
 
 @Component({
   selector: 'app-clientes-form',
@@ -10,17 +10,16 @@ import { Cliente } from '../cliente';
   styleUrls: ['./clientes-form.component.css'],
 })
 export class ClientesFormComponent implements OnInit {
-  cliente: Cliente;
+  cliente: ClienteDTO;
   success: boolean;
   errors: string[];
   clienteId: number;
 
   constructor(
     private clientesService: ClientesService,
-    private router: Router,
     private activatedRoute: ActivatedRoute
   ) {
-    this.cliente = new Cliente();
+    this.cliente = new ClienteDTO();
   }
 
   ngOnInit(): void {
@@ -55,9 +54,5 @@ export class ClientesFormComponent implements OnInit {
         (error) => (this.errors = error.error.errors)
       );
     }
-  }
-
-  backList(): void {
-    this.router.navigate(['/clientes-list']);
   }
 }

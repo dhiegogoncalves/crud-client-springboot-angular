@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { ClientesService } from './../clientes.service';
-import { Cliente } from './../cliente';
+import { ClienteDTO } from '../cliente.dto';
 
 @Component({
   selector: 'app-clientes-list',
@@ -10,8 +10,8 @@ import { Cliente } from './../cliente';
   styleUrls: ['./clientes-list.component.css'],
 })
 export class ClientesListComponent implements OnInit {
-  clientes: Cliente[] = [];
-  clienteSelectedDelete: Cliente;
+  clientes: ClienteDTO[] = [];
+  clienteSelectedDelete: ClienteDTO;
   successMessage: string;
   errorMessage: string;
 
@@ -33,7 +33,7 @@ export class ClientesListComponent implements OnInit {
     );
   }
 
-  selectClienteDelete(cliente: Cliente): void {
+  selectClienteDelete(cliente: ClienteDTO): void {
     this.clienteSelectedDelete = cliente;
   }
 

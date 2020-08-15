@@ -4,6 +4,8 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
+import javax.validation.Valid;
+
 import com.project.backend.model.entity.Cliente;
 import com.project.backend.model.entity.ServicoPrestado;
 import com.project.backend.model.repository.ClienteRepository;
@@ -33,14 +35,14 @@ public class ServicoPrestadoController {
 
   @PostMapping
   @ResponseStatus(HttpStatus.CREATED)
-  public ServicoPrestado save(@RequestBody ServicoPrestadoDTO servicoPrestadoDTO) {
+  public ServicoPrestado save(@RequestBody @Valid ServicoPrestadoDTO servicoPrestadoDTO) {
     LocalDate data = LocalDate.parse(servicoPrestadoDTO.getData(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
 
     Cliente cliente = clienteRepository.findById(servicoPrestadoDTO.getClienteId())
         .orElseThrow(() -> new ResponseStatusException(HttpStatus.BAD_REQUEST, "Cliente inexistente"));
 
-    ServicoPrestado servicoPrestado = new ServicoPrestado(null, servicoPrestadoDTO.getDescricao(), cliente,
-        BigDecimalUtil.convert(servicoPrestadoDTO.getPreco()), data);
+    ServicoPrestado servicoPrestado = new ServicoPrestado(null, servicoPrestadoDTO.getDescricao(), cliente, data,
+        BigDecimalUtil.convert(servicoPrestadoDTO.getPreco()));
 
     return servicoPrestadoRepository.save(servicoPrestado);
   }

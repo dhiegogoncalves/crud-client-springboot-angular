@@ -1,8 +1,67 @@
-<h1 class="mt-4">Clientes</h1>
+<h1 class="mt-4">Serviços Prestados</h1>
 <ol class="breadcrumb mb-4">
-  <li class="breadcrumb-item active"></li>
+  <li class="breadcrumb-item active">Cadastrar</li>
 </ol>
 
 <div class="container-fluid">
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="alert alert-success" role="alert" *ngIf="success === true">
+        Serviço Prestado salvo/atualizado com sucesso!
+      </div>
+      <div class="alert alert-danger" role="alert" *ngFor="let erro of errors">
+        {{ erro }}
+      </div>
+    </div>
+  </div>
+
+  <form #form="ngForm" (submit)="onSubmit()">
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label>Cliente:</label>
+          <select class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)]="servicoPrestado.clienteId">
+            <option [value]=null disabled>Selecione...</option>
+            <option *ngFor="let cliente of clientes" [ngValue]="cliente.id">{{ cliente.nome }}</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <div class="form-group">
+          <label>Descrição:</label>
+          <input type="text" class="form-control" name="descricao" [(ngModel)]="servicoPrestado.descricao">
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Data:</label>
+          <input type="text" class="form-control" name="data" [(ngModel)]="servicoPrestado.data">
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Preço:</label>
+          <input type="text" class="form-control" name="preco" [(ngModel)]="servicoPrestado.preco">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3">
+        <button type="submit" class="btn btn-success">
+          <i class=" fa fa-save"></i> Salvar
+        </button>
+
+        <button type="button" class="btn btn-danger ml-2" routerLink="/servicos-prestados-list">
+          <i class=" fa fa-arrow-alt-circle-left"></i> Voltar
+        </button>
+      </div>
+    </div>
+  </form>
 
 </div>
