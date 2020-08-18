@@ -4,10 +4,11 @@ import { RouterModule } from '@angular/router';
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { SiderbarComponent } from './siderbar/siderbar.component';
+import { LayoutComponent } from './layout/layout.component';
 
 @NgModule({
-  declarations: [NavbarComponent, SiderbarComponent],
+  declarations: [NavbarComponent, SiderbarComponent, LayoutComponent],
   imports: [CommonModule, RouterModule],
-  exports: [NavbarComponent, SiderbarComponent],
+  exports: [NavbarComponent, SiderbarComponent, LayoutComponent],
 })
 export class TemplateModule {}

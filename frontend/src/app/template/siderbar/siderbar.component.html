@@ -12,24 +12,32 @@
         </a>
 
         <div class="sb-sidenav-menu-heading">Cadastros</div>
-        <a class="nav-link" routerLink="/clientes-list">
+        <a class="nav-link" routerLink="/clientes">
           <div class="sb-nav-link-icon">
             <i class="fas fa-columns"></i>
           </div>
           Clientes
         </a>
 
-        <a class="nav-link" routerLink="/servicos-prestados-list">
+        <a class="nav-link" routerLink="/servicos-prestados">
           <div class="sb-nav-link-icon">
             <i class="fas fa-address-card"></i>
           </div>
           Serviços Prestados
         </a>
+
+        <div class="sb-sidenav-menu-heading">Logout</div>
+        <a class="nav-link" href="#" (click)="logout()">
+          <div class="sb-nav-link-icon">
+            <i class="fas fa-sign-out-alt"></i>
+          </div>
+          Sair
+        </a>
       </div>
     </div>
     <div class="sb-sidenav-footer">
       <div class="small">Logado como:</div>
-      Usuário
+      {{ userName }}
     </div>
   </nav>
 </div>

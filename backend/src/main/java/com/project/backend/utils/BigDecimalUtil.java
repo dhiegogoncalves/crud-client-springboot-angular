@@ -1,10 +1,12 @@
-package com.project.backend.util;
+package com.project.backend.utils;
 
 import java.math.BigDecimal;
 
-import org.springframework.stereotype.Component;
-
 public class BigDecimalUtil {
+
+    private BigDecimalUtil() {
+        throw new IllegalStateException("Utility class");
+    }
 
     public static BigDecimal convert(String value) {
         if (value == null) {

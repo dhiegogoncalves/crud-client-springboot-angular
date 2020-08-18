@@ -1,4 +1,7 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+
+import { AuthService } from './../../core/auth.service';
 
 @Component({
   selector: 'app-siderbar',
@@ -6,7 +9,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./siderbar.component.css'],
 })
 export class SiderbarComponent implements OnInit {
-  constructor() {}
+  userName: string;
 
-  ngOnInit(): void {}
+  constructor(private authService: AuthService, private router: Router) {}
+
+  ngOnInit(): void {
+    this.userName = this.authService.getUserName();
+  }
+
+  logout(): void {
+    this.authService.logout();
+    this.router.navigate(['/login']);
+  }
 }

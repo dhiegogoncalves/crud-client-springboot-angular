@@ -1,7 +1,7 @@
 package com.project.backend;
 
-import com.project.backend.model.entity.Cliente;
-import com.project.backend.model.repository.ClienteRepository;
+import com.project.backend.models.Cliente;
+import com.project.backend.repositories.ClienteRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;

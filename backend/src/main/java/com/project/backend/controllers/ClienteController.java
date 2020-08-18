@@ -1,11 +1,11 @@
-package com.project.backend.rest.controller;
+package com.project.backend.controllers;
 
 import java.util.List;
 
 import javax.validation.Valid;
 
-import com.project.backend.model.entity.Cliente;
-import com.project.backend.model.repository.ClienteRepository;
+import com.project.backend.models.Cliente;
+import com.project.backend.repositories.ClienteRepository;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;

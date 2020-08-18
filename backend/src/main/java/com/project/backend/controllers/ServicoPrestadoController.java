@@ -1,4 +1,4 @@
-package com.project.backend.rest.controller;
+package com.project.backend.controllers;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -6,12 +6,12 @@ import java.util.List;
 
 import javax.validation.Valid;
 
-import com.project.backend.model.entity.Cliente;
-import com.project.backend.model.entity.ServicoPrestado;
-import com.project.backend.model.repository.ClienteRepository;
-import com.project.backend.model.repository.ServicoPrestadoRepository;
-import com.project.backend.rest.dto.ServicoPrestadoDTO;
-import com.project.backend.util.BigDecimalUtil;
+import com.project.backend.dtos.ServicoPrestadoDTO;
+import com.project.backend.models.Cliente;
+import com.project.backend.models.ServicoPrestado;
+import com.project.backend.repositories.ClienteRepository;
+import com.project.backend.repositories.ServicoPrestadoRepository;
+import com.project.backend.utils.BigDecimalUtil;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;

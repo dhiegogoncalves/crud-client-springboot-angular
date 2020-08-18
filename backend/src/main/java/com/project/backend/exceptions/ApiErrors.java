@@ -1,4 +1,4 @@
-package com.project.backend.rest.exception;
+package com.project.backend.exceptions;
 
 import java.util.Arrays;
 import java.util.List;

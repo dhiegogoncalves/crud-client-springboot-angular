@@ -18,7 +18,7 @@
 
   <div class="row">
     <div class="col-md-2">
-      <button class="btn btn-warning" routerLink="/clientes-form">
+      <button class="btn btn-warning" routerLink="/clientes/form">
         <i class="fa fa-plus"></i> Novo
       </button>
     </div>
@@ -45,7 +45,7 @@
             <td>{{ cliente.cpf }}</td>
             <td>{{ cliente.dataCadastro }}</td>
             <td>
-              <button class="btn btn-primary mr-2" routerLink="/clientes-form/{{ cliente.id }}">
+              <button class="btn btn-primary mr-2" routerLink="/clientes/form/{{ cliente.id }}">
                 <i class="fa fa-edit"></i>
               </button>
               <button class="btn btn-danger" data-toggle="modal" data-target="#exclusion-modal"

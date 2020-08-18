@@ -1,4 +1,4 @@
-package com.project.backend.rest.dto;
+package com.project.backend.dtos;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;

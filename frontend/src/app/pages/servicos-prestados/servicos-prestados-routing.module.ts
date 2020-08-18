@@ -3,19 +3,25 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ServicosPrestadosListComponent } from './servicos-prestados-list/servicos-prestados-list.component';
 import { ServicosPrestadosFormComponent } from './servicos-prestados-form/servicos-prestados-form.component';
+import { LayoutComponent } from 'src/app/template/layout/layout.component';
+import { AuthGuard } from 'src/app/core/auth.guard';
 
 const routes: Routes = [
   {
-    path: 'servicos-prestados-list',
-    component: ServicosPrestadosListComponent,
-  },
-  {
-    path: 'servicos-prestados-form/:id',
-    component: ServicosPrestadosFormComponent,
-  },
-  {
-    path: 'servicos-prestados-form',
-    component: ServicosPrestadosFormComponent,
+    path: 'servicos-prestados',
+    component: LayoutComponent,
+    canActivate: [AuthGuard],
+    children: [
+      {
+        path: 'list',
+        component: ServicosPrestadosListComponent,
+      },
+      {
+        path: 'form',
+        component: ServicosPrestadosFormComponent,
+      },
+      { path: '', redirectTo: '/servicos-prestados/list', pathMatch: 'full' },
+    ],
   },
 ];
 

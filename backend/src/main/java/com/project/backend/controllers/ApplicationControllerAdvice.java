@@ -1,9 +1,9 @@
-package com.project.backend.rest.controller;
+package com.project.backend.controllers;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.project.backend.rest.exception.ApiErrors;
+import com.project.backend.exceptions.ApiErrors;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,7 +28,7 @@ public class ApplicationControllerAdvice {
 
   @ExceptionHandler(ResponseStatusException.class)
   public ResponseEntity handleResponseStatusException(ResponseStatusException ex) {
-    String errorMessage = ex.getMessage();
+    String errorMessage = ex.getReason();
     HttpStatus statusCode = ex.getStatus();
     ApiErrors apiErrors = new ApiErrors(errorMessage);
     return new ResponseEntity<>(apiErrors, statusCode);
