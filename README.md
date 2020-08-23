@@ -24,7 +24,7 @@ O projeto contém crud de clientes e serviços prestados com segurança entre o 
 - [Docker Engine](https://docs.docker.com/engine/install/)
 - [Docker Compose](https://docs.docker.com/compose/install/)
 
-###  Build Steps
+### :bricks: Build Steps
 
 1. Clone repository
 
