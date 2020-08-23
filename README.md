@@ -17,12 +17,14 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O projeto contém crud de clientes e serviços prestados com segurança entre o spring e o angular com token jwt.
 
-## :warning: Prerequisites
+## :rocket: Getting Started
+
+### :warning: Prerequisites
 
 - [Docker Engine](https://docs.docker.com/engine/install/)
 - [Docker Compose](https://docs.docker.com/compose/install/)
 
-## :rocket: Build Steps
+###  Build Steps
 
 1. Clone repository
 
