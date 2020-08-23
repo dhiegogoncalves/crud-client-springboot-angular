@@ -19,12 +19,12 @@ O projeto contém crud de clientes e serviços prestados com segurança entre ba
 
 ## :rocket: Getting Started
 
-### :warning: Prerequisites
+### Prerequisites
 
 - [Docker Engine](https://docs.docker.com/engine/install/)
 - [Docker Compose](https://docs.docker.com/compose/install/)
 
-### :bricks: Build Steps
+### Build Steps
 
 1. Clone repository
 
