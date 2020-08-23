@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  frontend:
+    build: ./frontend/
+    container_name: frontend
+    restart: always
+    tty: true
+    ports:
+      - "8081:8081"
+    networks:
+      - app-network
+    depends_on:
+      - backend
+
+  backend:
+    build: ./backend/
+    container_name: backend
+    restart: always
+    tty: true
+    ports:
+      - "8080:8080"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
