@@ -2,14 +2,14 @@
    CRUD Client / Spring Boot - Angular
 </h1>
 
-## :books: Technologies
+## :books: Built With
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - [Spring](https://spring.io/)
 - [Angular](https://angular.io/)
 
-## :computer: Project
+## :computer: About The Project
 
 O projeto contém crud de clientes e serviços prestados com segurança entre o spring e o angular com token jwt.
 
