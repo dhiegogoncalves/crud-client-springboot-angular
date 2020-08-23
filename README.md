@@ -19,8 +19,8 @@ O projeto contém crud de clientes e serviços prestados com segurança entre o 
 
 ## :warning: Prerequisites
 
-- Docker
-- Docker Compose
+- [Docker Engine](https://docs.docker.com/engine/install/)
+- [Docker Compose](https://docs.docker.com/compose/install/)
 
 ## :rocket: Build Steps
 
