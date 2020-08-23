@@ -6,8 +6,12 @@
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- [Spring](https://spring.io/)
+- [Spring Boot](https://spring.io/projects/spring-boot)
+- [Spring Data](https://spring.io/projects/spring-data)
+- [Spring Security](https://spring.io/projects/spring-security)
 - [Angular](https://angular.io/)
+- [Bootstrap](https://getbootstrap.com/)
+- [jQuery](https://jquery.com/)
 
 ## :computer: About The Project
 
