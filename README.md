@@ -15,7 +15,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## :computer: About The Project
 
-O projeto contém crud de clientes e serviços prestados com segurança entre o spring e o angular com token jwt.
+O projeto contém crud de clientes e serviços prestados com segurança entre backend e frontend com token jwt.
 
 ## :rocket: Getting Started
 
