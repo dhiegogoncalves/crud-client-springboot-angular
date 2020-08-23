@@ -1,4 +1,6 @@
-# CRUD Client / Spring Boot - Angular
+<h1 align="center">
+   CRUD Client / Spring Boot - Angular
+</h1>
 
 ## :books: Technologies
 
